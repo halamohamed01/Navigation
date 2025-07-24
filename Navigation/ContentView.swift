@@ -9,13 +9,24 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Text("Navigation!")
+        NavigationStack{
+            VStack {
+                Text("This is the root view")
+                
+                NavigationLink(destination: Secondview())  {
+                    Text("Click me!")
+                
+                }
+                .navigationTitle("Home")
+                .navigationBarTitleDisplayMode(.inline)
+                .navigationBarHidden(true)
+            }
+            .padding()
         }
-        .padding()
     }
 }
 
 #Preview {
     ContentView()
 }
+                 
